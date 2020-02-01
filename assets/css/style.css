@@ -1,0 +1,45 @@
+/*  CSS for Site */
+
+* {
+    box-sizing: border-box;
+  }
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 14px;
+}
+
+body > .container {
+  padding: 60px 15px 0;
+}
+
+nav {
+  font-size: 24px;
+}
+
+h1 {
+  font-family: 'Fredericka the Great', cursive;
+}
+
+#roles {
+  font-size: 20px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
