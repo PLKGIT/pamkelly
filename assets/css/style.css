@@ -13,6 +13,12 @@ body {
   margin-bottom: 60px;
   font-family: 'Tenor Sans', sans-serif;
   font-size: 24px;
+
+}
+
+#backimg {
+  background-image: url(/assets/images/repeated-square.png);
+  opacity: 0.2;
 }
 
 body > .container {
@@ -59,4 +65,24 @@ h1 {
 
 #devModal, #pmModal, #techModal {
   font-size: 20px;
+}
+
+.cardfoot a:link {
+  /* unvisited link white */
+	color: white;
+}
+/* visited link white */
+.cardfoot a:visited {
+	color: white;
+}
+/* mouse over link blue */
+.cardfoot a:hover {
+	color: red;
+}
+/* selected link blue */
+.cardfoot a:active {
+	color: #0CF;
+}
+
+#content-show{
 }
