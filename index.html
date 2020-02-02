@@ -57,30 +57,52 @@
     <div class="jumbotron jumbotron-fluid bg-info text-white">
         <div class="container">
             <h1 class="display-1">Pam Kelly</h1>
-            <p class="lead font-italic text-dark">Pam is an experienced customer-facing project manager, end-user product trainer, technical writer, and web developer with more than 7 years experience working with remote and offshore teams. </p>
+            <p class="lead font-italic text-dark">Pam is an experienced customer-facing project manager, end-user
+                product trainer, technical writer, and web developer with more than 7 years experience working with
+                remote and offshore teams. </p>
             <p class="text-right">
-                <a
-                href="mailto:
-                &#101;&#115;&#113;&#046;&#107;&#101;&#108;&#108;&#121;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;" target="_blank"><button type="button" id="contact" class="btn btn-link text-white">CONTACT PAM</button></a>
+                <a href="mailto:
+                &#101;&#115;&#113;&#046;&#107;&#101;&#108;&#108;&#121;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;"
+                    target="_blank"><button type="button" id="contact" class="btn btn-link text-white">CONTACT
+                        PAM</button></a>
             </p>
-            
+
         </div>
 
     </div>
 
     <div class="container-fluid" id="roles">
         <div class="row text-center">
-            <div class="col-lg pb-1"><button type="button" class="btn btn-lg btn-block btn-secondary" data-toggle="modal"
-                    data-target="#devModal">Developer</button>
+            <div class="col-lg pb-1"><button type="button" class="btn btn-lg btn-block btn-secondary"
+                    data-toggle="modal" data-target="#devModal">Developer</button>
             </div>
-            <div class="col-lg pb-1"><button type="button" class="btn btn-lg btn-block btn-secondary" data-toggle="modal"
-                    data-target="#pmModal">Project
+            <div class="col-lg pb-1"><button type="button" class="btn btn-lg btn-block btn-secondary"
+                    data-toggle="modal" data-target="#pmModal">Project
                     Manager</button></div>
-            <div class="col-lg pb-1"><button type="button" class="btn btn-lg btn-block btn-secondary" data-toggle="modal"
-                    data-target="#techModal">Product
+            <div class="col-lg pb-1"><button type="button" class="btn btn-lg btn-block btn-secondary"
+                    data-toggle="modal" data-target="#techModal">Product
                     Trainer</button></div>
 
         </div>
+    </div>
+    <div class="container-fluid py-3">
+
+    </div>
+    <div class="container-fluid" id="superheros">
+        <h4 class="text-info">Who's Your Favorite Superhero?</h3>
+        <form class="form-inline">
+            <label class="sr-only" for="hero"></label>
+            <div class="input-group mb-2 mr-sm-2">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">Superhero</div>
+                </div>
+                <input type="text" class="form-control-lg" id="hero" placeholder="Black Panther">
+            </div>
+            <button type="submit" class="btn btn-info btn-lg mb-2" id="super">Find</button>
+        </form>
+        <p>
+            <span id="resultsHero"></span>
+        </p>
     </div>
     <footer class="footer">
         <div class="container-fluid bg-info text-right">
@@ -100,10 +122,15 @@
                 </div>
                 <div class="modal-body">
                     <p>
-                        Ms. Kelly will complete UC Berkeley's full-stack programming bootcamp in May 2020. During the program, she has  gained practical experience developing sites using HTML,CSS, JavaScript, jQuery, Node JS, Git, Git Bash, GitHub, Firebase, and Visual Studio Code.
+                        Ms. Kelly will complete UC Berkeley's full-stack programming bootcamp in May 2020. During the
+                        program, she has gained practical experience developing sites using HTML,CSS, JavaScript,
+                        jQuery, Node JS, Git, Git Bash, GitHub, Firebase, and Visual Studio Code.
 
                     </p>
-                    <p>She also has broad experience on Intel and Mac platforms, including with Gmail, Google Docs, Slides, Sheets, Calendar, and Drive, Microsoft Word, Excel, and PowerPoint, TechSmith Camtasia, Snag It, and Screencast, Adobe Audition, Captivate, and Acrobat Pro, Markdown, HTML, CSS, WordPress, and tools such as Terminal, Jenkins, Postman, JIRA, and Confluence.</p>
+                    <p>She also has broad experience on Intel and Mac platforms, including with Gmail, Google Docs,
+                        Slides, Sheets, Calendar, and Drive, Microsoft Word, Excel, and PowerPoint, TechSmith Camtasia,
+                        Snag It, and Screencast, Adobe Audition, Captivate, and Acrobat Pro, Markdown, HTML, CSS,
+                        WordPress, and tools such as Terminal, Jenkins, Postman, JIRA, and Confluence.</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -150,8 +177,13 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Ms. Kelly's experience includes creating and delivering product training and documentation for a SaaS Commerce product company.</p>
-                    <p>As its Platform Training and Documentation Lead, she developed and conducted online and on-site training for internal and external users. Additionally, she managed the successful launch of the company's Developer Portal at <a href="https://developer.skava.com" target="_blank">https://developer.skava.com</a>, created and/or edited business and technical user training content and managed an offshore documentation team.</p>
+                    <p>Ms. Kelly's experience includes creating and delivering product training and documentation for a
+                        SaaS Commerce product company.</p>
+                    <p>As its Platform Training and Documentation Lead, she developed and conducted online and on-site
+                        training for internal and external users. Additionally, she managed the successful launch of the
+                        company's Developer Portal at <a href="https://developer.skava.com"
+                            target="_blank">https://developer.skava.com</a>, created and/or edited business and
+                        technical user training content and managed an offshore documentation team.</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -166,8 +198,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         type="text/javascript"></script>
     <!--My JS file-->
-    <script src="assets/javascript/app.js"
-    type="text/javascript"></script>
+    <script src="assets/javascript/app.js" type="text/javascript"></script>
 </body>
 
 </html>

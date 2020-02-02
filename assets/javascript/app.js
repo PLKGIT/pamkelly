@@ -23,4 +23,34 @@ $(document).ready(function () {
         }
     });
 
+    $("#super").on("click", function (event) {
+
+        // Prevent default action on click
+        event.preventDefault();
+
+        // AJAX Call to API
+        //-----Pulls the superhero image
+
+        var heroName = $("#hero");
+        console.log(heroName.val());
+
+        $.ajax({
+            url: "https://superheroapi.com/api/10157763823113954/search/" + heroName.val(),
+            type: 'GET',
+            // Error handling
+            error: function () {
+                $("#resultsHero").html("An error occurred, please try again.");
+            },
+            // On success, display results in Quotes modal
+            success: function (response) {
+                $("#resultsHero").html(response.results[0].name);
+            },
+            
+        });
+
+    });
+
+
+
+
 });
