@@ -7,10 +7,12 @@ $(document).ready(function () {
     // Call Star Wars Quote API on page load
 
     $.ajax({
-        url: "https://swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQuote",
+        url: "http://swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQuote",
         data: {
             format: 'json'
         },
+        "async": true,
+        "crossDomain": true,
        
         success: function (response) {
 
@@ -20,7 +22,7 @@ $(document).ready(function () {
             $("#quote").html(response.starWarsQuote);
         },
         error: function () {
-            $("#quote").html("Sorry, there was an error.  Please try again.");
+            $("#quote").html("Sorry, there was an error retrieving the quote.  Please try again.");
         },
         type: "GET"
     });
