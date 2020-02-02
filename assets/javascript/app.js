@@ -7,7 +7,7 @@ $(document).ready(function () {
     // Call Star Wars Quote API on page load
 
     $.ajax({
-        url: "http://swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQuote",
+        url: "https://swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQuote",
         data: {
             format: 'json'
         },
