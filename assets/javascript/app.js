@@ -4,10 +4,11 @@
 
 $(document).ready(function () {
 
-    // Call Star Wars Quote API on page load
+    // Call Programming Quotes API on page load
+    // https://programming-quotes-api.herokuapp.com/
 
     $.ajax({
-        url: "http://swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQuote",
+        url: "https://programming-quotes-api.herokuapp.com/quotes/random",
         data: {
             format: 'json'
         },
@@ -17,9 +18,10 @@ $(document).ready(function () {
         success: function (response) {
 
             // console.log(response);
-            // console.log(response.starWarsQuote);
+            // console.log(response.en);
+            // console.log(response.author);
 
-            $("#quote").html(response.starWarsQuote);
+            $("#quote").html(response.en + " - " + response.author);
         },
         error: function () {
             $("#quote").html("Sorry, there was an error retrieving the quote.  Please try again.");
@@ -27,13 +29,18 @@ $(document).ready(function () {
         type: "GET"
     });
 
+    // Tooltips
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      })
+
     // Switch Images
     $(document).on("click", ".card-img-top", function () {
 
         //  $(".gif").on("click", function () {
         // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
         var state = $(this).attr("data-state");
-        console.log(state);
+        // console.log(state);
         // If the clicked image's state is still, update its src attribute to what its data-animate value is.
         // Then, set the image's data-state to animate
         // Else set src to the data-still value
