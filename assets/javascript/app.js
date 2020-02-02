@@ -4,6 +4,27 @@
 
 $(document).ready(function () {
 
+    // Call Star Wars Quote API on page load
+
+    $.ajax({
+        url: "http://swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQuote",
+        data: {
+            format: 'json'
+        },
+       
+        success: function (response) {
+
+            // console.log(response);
+            // console.log(response.starWarsQuote);
+
+            $("#quote").html(response.starWarsQuote);
+        },
+        error: function () {
+            $("#quote").html("Sorry, there was an error.  Please try again.");
+        },
+        type: "GET"
+    });
+
     // Switch Images
     $(document).on("click", ".card-img-top", function () {
 
@@ -22,35 +43,5 @@ $(document).ready(function () {
             $(this).attr("data-state", "begin");
         }
     });
-
-    $("#super").on("click", function (event) {
-
-        // Prevent default action on click
-        event.preventDefault();
-
-        // AJAX Call to API
-        //-----Pulls the superhero image
-
-        var heroName = $("#hero");
-        console.log(heroName.val());
-
-        $.ajax({
-            url: "https://superheroapi.com/api/10157763823113954/search/" + heroName.val(),
-            type: 'GET',
-            // Error handling
-            error: function () {
-                $("#resultsHero").html("An error occurred, please try again.");
-            },
-            // On success, display results in Quotes modal
-            success: function (response) {
-                $("#resultsHero").html(response.results[0].name);
-            },
-            
-        });
-
-    });
-
-
-
 
 });
