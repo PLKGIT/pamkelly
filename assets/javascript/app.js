@@ -27,11 +27,6 @@ $(document).ready(function () {
         type: "GET"
     });
 
-    // Tooltips enabled for projects with alternate images
-    $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-    })
-
     // Switch images on click
     $(document).on("click", ".card-img-top", function () {
 
