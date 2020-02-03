@@ -1,0 +1,553 @@
+<!DOCTYPE HTML>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Admin User Guide: Accounts</title>
+</head>
+
+<body>
+    <div class="header">
+    </div>
+    <div id="navbar">
+        <a class="active" href="../../index.html">Home</a>
+        <a href="#top">Sample: Admin User Guide for Accounts</a>
+    </div>
+    <div class="content">
+        <div id="top">
+            </br>
+            <p style="color:blue"><em>This Admin Guide is intended for use by business users that managing their
+                    business' buyers via Skava's Accounts microservice.</em></p>
+            <ol style="color:blue">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#glossary">Accounts Glossary</a></li>
+                <li><a href="#accounts">Accounts</a></li>
+                <ul>
+                    <li><a href="#accounts">Accessing the Accounts Console</a></li>
+                </ul>
+                <li><a href="#manage">Manage Accounts</a></li>
+                <ul>
+                    <li><a href="#manage">Accounts Console</a></li>
+                    <li><a href="#search">Search for Accounts</a></li>
+                    <li><a href="#export">Export Lists of Accounts</a></li>
+                    <li><a href="#create">Create Accounts</li>
+                    <li><a href="#view">View/Edit Account Details</a></li>
+                </ul>
+            </ol>
+            <hr>
+            <div id="overview">
+                <h2>Overview</h2>
+                <p>The Accounts microservice ("Accounts") allows Accounts Admin/Accounts Rep to create and manage
+                    Business to Business (B2B) accounts for its clients. For a detailed overview of the
+                    <strong>Accounts</strong> microservice, see <i>Accounts Microservice</i>.</p>
+            </div>
+            <div id="glossary">
+                <h2>Accounts Glossary</h2>
+            </div>
+            <ul>
+                <li>
+                    <p><strong>Business or Organization</strong> - the parent of a <strong>store</strong> or set of
+                        <strong>stores</strong>. The basic use of a <strong>business</strong> is to manage common sets
+                        of users, catalogs, and other services for the <strong>stores</strong> associated with the
+                        business.</p>
+                </li>
+                <li>
+                    <p><strong>Business Admin</strong> - a role that manages business settings, creates and manages
+                        stores, and enables microservice(s) for a <strong>business</strong>. </p>
+                </li>
+                <li>
+                    <p><strong>Catalog</strong> - a container for the set of information about individual
+                        <strong>products</strong> and <strong>stock keeping units</strong> (SKUs) for a
+                        <strong>store</strong>.</p>
+                </li>
+                <li>
+                    <p><strong>Catalog Manager</strong> - creates, manages, and approves changes to catalogs.</p>
+                </li>
+                <li>
+                    <p><strong>Customer</strong>- a business consumer or buyer on the Business' B2B storefront.</p>
+                </li>
+                <li>
+                    <p><strong>Price Lists</strong> - a container or wrapper entity to hold the prices of multiple
+                        <strong>stock keeping units</strong> (SKUs) available for sale to a consumer or buyer.</p>
+                </li>
+                <li>
+                    <p><strong>Pricing Manager</strong> - creates and edits price lists, approves and denies data
+                        submitted by <strong>pricing editors</strong>, and manages currency and price types used by a
+                        <strong>price list</strong>.</p>
+                </li>
+                <li>
+                    <p><strong>Product</strong> - a good, service, or idea that has a combination of tangible and
+                        intangible attributes and can have multiple variants which are referred to as <strong>stock
+                            keeping units</strong> (SKUs). In Skava Commerce, the consumer/buyer evaluates a product
+                        (for example, a men's dress shoe available in black and brown and in sizes from 10 to 15), but
+                        actually purchases a SKU associated with the product (for example, a black colored version of
+                        the dress shoe in size 12) rather than the product itself. </p>
+                </li>
+                <li>
+                    <p><strong>Stock Keeping Unit</strong> (SKU) - a particular variant of a <strong>product</strong>
+                        which is available for purchase by a consumer/buyer.</p>
+                </li>
+                <li>
+                    <p><strong>Store</strong> - represents a specific physical location or online store of a
+                        <strong>business</strong>. </p>
+                </li>
+                <li>
+                    <p><strong>Storefront</strong> - a consumer-facing website that presents products, content, and
+                        promotions across multiple channels such as desktop, tablet, and mobile.</p>
+                </li>
+            </ul>
+            <hr width="10%">
+            <center><a href="#top"><strong>TOP</strong></a></center>
+            <div id="accounts">
+                <h2>Accounts (B2B)</h2>
+                <h3>Accessing the Accounts Console</h3>
+            </div>
+            <ul>
+                <li>Login to the <strong>Foundation</strong> server for your <strong>business</strong> (URL provided by
+                    Skava).</li>
+            </ul>
+
+            <p class="tab"><img
+                    src="https://res.cloudinary.com/damplk/image/upload/v1566506345/accounts/image_00_cnbyiq.png"
+                    alt="Login Screen" width="90%" max-width="90%" height="auto" /></p>
+
+            <ul>
+                <li>Click the <strong>Accounts</strong> option from the <strong>StoreOps</strong> screen.</li>
+            </ul>
+
+            <p class="tab"><img
+                    src="https://res.cloudinary.com/damplk/image/upload/v1566506345/accounts/image_01_qqemzt.png"
+                    alt="Store Ops Screen" width="90%" max-width="90%" height="auto" /></p>
+
+            <ul>
+                <li>Manage <strong>Accounts</strong> from the Accounts Console for your <strong>store(s)</strong>.</li>
+            </ul>
+
+            <p class="tab"><img
+                    src="https://res.cloudinary.com/damplk/image/upload/v1566506345/accounts/image_02_grrltj.png"
+                    alt="Accounts Console" width="90%" max-width="90%" height="auto" /></p>
+            <hr width="10%">
+            <center><a href="#top"><strong>TOP</strong></a></center>
+            </br>
+            <div id="manage">
+                <h2>Manage Accounts</h2>
+                <h3>Accounts Console</h3>
+            </div>
+            <ul>
+                <li>
+                    <p>The home screen of the Accounts Console will contain a list of all <strong>Accounts</strong> for
+                        a <strong>store</strong>.</p>
+
+                    <ul>
+                        <li>
+                            <p>By default, 10 accounts per screen will appear, but it can be increased to 25 or 50 by
+                                clicking the <strong>Rows</strong> dropdown at the bottom left of the screen.</p>
+                        </li>
+                        <li>
+                            <p>Navigation to additional screens is easy with the <strong>pagination</strong> option that
+                                appears at the bottom right of the screen.</p>
+
+                            <p><strong>Note: Rows</strong> per screen and <strong>pagination</strong> options are
+                                available on all screens containing data in rows.</p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            </br>
+            <p class="tab"><img
+                    src="https://res.cloudinary.com/damplk/image/upload/v1566506345/accounts/image_03_bm1xvu.png"
+                    alt="Console Rows" width="90%" max-width="90%" height="auto" /></p>
+            </br>
+            <ul>
+                <li>In addition to using the <strong>back</strong> button, Accounts Managers can navigate back to the
+                    homepage of the Accounts Console by using the breadcrumbs at the left top of all screens. </li>
+            </ul>
+            </br>
+            <p class="tab"><img
+                    src="https://res.cloudinary.com/damplk/image/upload/v1566506345/accounts/image_04_zlmht4.png"
+                    alt="Console Breadcrumb" width="90%" max-width="90%" height="auto" /></p>
+            <hr width="10%">
+            <center><a href="#top"><strong>TOP</strong></a></center>
+            </br>
+            <div id="search">
+                <h3>Search for Accounts</h3>
+                <p>The Accounts screens include options for searching the accounts as well as exporting rows of
+                    accounts.</p>
+            </div>
+            <ul>
+                <li>
+                    <p>Click the dropdown on the <strong>Account Type</strong> header to open the <strong>entry
+                            field</strong> to provide a search criteria.</p>
+                </li>
+                <li>
+                    <p>Enter the desired search data and click the <strong>Search</strong> button when done.</p>
+                </li>
+            </ul>
+            </br>
+            <p class="tab"><img
+                    src="https://res.cloudinary.com/damplk/image/upload/v1566506345/accounts/image_05_rfqaee.png"
+                    alt="Console Search" width="90%" max-width="90%" height="auto" /></p>
+            </br>
+            <ul>
+                <li>The search results list can be restricted by <strong>status</strong> (i.e. Active, Inactive,
+                    Pending, Reject, and Suspended) of Accounts by clicking the <strong>Status</strong> header and
+                    selecting the desired restriction.
+                    <strong>Note:</strong> The default is all the records match with the search field criteria
+                    irrespective of the <strong>status</strong>.</li>
+            </ul>
+            </br>
+            <p class="tab"><img
+                    src="https://res.cloudinary.com/damplk/image/upload/v1566506345/accounts/image_06_j0gfl7.png"
+                    alt="Console Search Filters" width="90%" max-width="90%" height="auto" /></p>
+            </br>
+            <ul>
+                <li>The available searchable fields list can be edited by clicking the <strong>ellipse</strong> at the
+                    right of the <strong>Status</strong> search field and then checking or unchecking the items in the
+                    list.</li>
+            </ul>
+            </br>
+            <p class="tab"><img
+                    src="https://res.cloudinary.com/damplk/image/upload/v1566506345/accounts/image_07_dqpjkj.png"
+                    alt="Console Search Fields" width="90%" max-width="90%" height="auto" /></p>
+            </br>
+            <ul>
+                <li>Click the <strong>Reset</strong> button at the left of the <strong>Search</strong> button to reset
+                    the search criteria so that all the records appear in the results list.</li>
+            </ul>
+            </br>
+            <p class="tab"><img
+                    src="https://res.cloudinary.com/damplk/image/upload/v1566506345/accounts/image_08_fo8xhz.png"
+                    alt="Console Search Reset" width="90%" max-width="90%" height="auto" /></p>
+            <hr width="10%">
+            <center><a href="#top"><strong>TOP</strong></a></center>
+            </br>
+            <div id="export">
+                <h3>Export Lists of Accounts</h3>
+                <p>Within the Accounts home screen, Accounts Managers have the option to export lists of
+                    <strong>accounts</strong> data including <strong>account name</strong>, <strong>ID</strong>,
+                    <strong>account type</strong>, <strong>account rep</strong>, <strong>payment method</strong>,
+                    payment <strong>terms</strong>, and <strong>status</strong>.</p>
+            </div>
+            <ul>
+                <li>
+                    <p>Click the <strong>ellipse</strong> just below the <strong>Search</strong> button to expose the
+                        <strong>export</strong> options.</p>
+                </li>
+                <li>
+                    <p>Click the <strong>Export Rows</strong> option in the modal to <strong>export</strong>
+                        <strong>rows</strong> of Accounts data to an Excel spreadsheet.</p>
+                </li>
+            </ul>
+            </br>
+            <p class="tab"><img
+                    src="https://res.cloudinary.com/damplk/image/upload/v1566506346/accounts/image_09_ogkm5q.png"
+                    alt="Console Export" width="90%" max-width="90%" height="auto" /></p>
+            </br>
+            <ul>
+                <li>Accounts Managers can also specify a list of fields that will be <strong>displayed</strong> and
+                    <strong>exported</strong> by click the <strong>Add / Remove Columns</strong> option in the modal and
+                    the checking or unchecking of the desired fields.</li>
+            </ul>
+            </br>
+            <p class="tab"><img
+                    src="https://res.cloudinary.com/damplk/image/upload/v1566506346/accounts/image_10_xk3yt7.png"
+                    alt="Console Field Display" width="90%" max-width="90%" height="auto" /></p>
+            <hr width="10%">
+            <center><a href="#top"><strong>TOP</strong></a></center>
+            </br>
+            <div id="create">
+                <h3>Create Accounts</h3>
+            </div>
+            <ul>
+                <li>Click the <strong>Create Account</strong> button at the top of the Accounts Console to create a new
+                    account.</li>
+            </ul>
+            <p class="tab"><img
+                    src="https://res.cloudinary.com/damplk/image/upload/v1566506346/accounts/image_11_pujptl.png"
+                    alt="Create Account Button" width="90%" max-width="90%" height="auto" /></p>
+            </br>
+            <ul>
+                <li>
+                    <p>Complete the <strong>Create Account</strong> screen fields (listed below), all of which are
+                        required<strong style="color:red">*</strong> unless otherwise noted:
+                        <ul>
+                            <li><strong>Account Name</strong><strong style="color:red">*</strong> - buyer (business)
+                                name</li>
+                            <li><strong>Buyer Email Address</strong><strong style="color:red">*</strong> - buyer admin's
+                                email address</li>
+                            <li><strong>First Name</strong><strong style="color:red">*</strong> - buyer admin's first
+                                name</li>
+                            <li><strong>Last Name</strong><strong style="color:red">*</strong> - buyer admin's last name
+                            </li>
+                            <li><strong>Account Type</strong><strong style="color:red">*</strong> - configurable by the
+                                Business Admin to allow the clients to segment their buyers (for example, Agriculture,
+                                Hospital, Computer, etc.) for promotional and other purposes</li>
+                            <li><strong>Account Size</strong><strong style="color:red">*</strong> - buyer's company size
+                                (reflects the possible number of shoppers from the buyer)</li>
+                            <li><strong>Address</strong><strong style="color:red">*</strong>- buyer's street address
+                            </li>
+                            <li><strong>City</strong><strong style="color:red">*</strong> - buyer's city</li>
+                            <li><strong>State</strong><strong style="color:red">*</strong> - buyer's state</li>
+                            <li><strong>Country</strong><strong style="color:red">*</strong> - buyer's country</li>
+                            <li><strong>Zipcode</strong><strong style="color:red">*</strong> - buyer's zip code</li>
+                            <li><strong>DUNS number</strong> (optional) - buyer's unique nine-digit identifier from Dun
+                                and Bradstreet</li>
+                            <li><strong>Tax ID</strong><strong style="color:red">*</strong> - buyer's federal tax
+                                identification number</li>
+                        </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>Click the <strong>Submit</strong> button when done.</li>
+            </ul>
+            </br>
+            <p class="tab"><img
+                    src="https://res.cloudinary.com/damplk/image/upload/v1566506346/accounts/image_13_z2grdt.png"
+                    alt="Submit Button" width="90%" max-width="90%" height="auto" /></p>
+            </br>
+            <ul>
+                <li>
+                    <p>There are four screens (in a tabbed display) of configurable Accounts information available
+                        during the creation process:</p>
+
+                    <ul>
+                        <li>Overview</li>
+                        <li>Contract</li>
+                        <li>Orders</li>
+                        <li>Customers</li>
+                    </ul>
+                </li>
+                <li>
+                    <p>Upon Account creation, the Accounts Manager will be redirected to the account
+                        <strong>Overview</strong> tab for the newly created Account. The tab contains the following
+                        sections and editable fields, all of which are required<strong style="color:red">*</strong>
+                        unless otherwise noted:</p>
+
+                    <ul>
+                        <li>
+                            <p><strong>Management</strong></p>
+                            <ul>
+                                <li><strong>Account Rep</strong><strong style="color:red">*</strong> - seller's
+                                    <strong>account representative</strong> for the buyer's account</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <p class="tab"><img
+                    src="https://res.cloudinary.com/damplk/image/upload/v1566506346/accounts/image_14_rtmvcs.png"
+                    alt="Account Managemnt" width="90%" max-width="90%" height="auto" /></p>
+            </br>
+            <ul>
+                <li><strong>Status</strong><strong style="color:red">*</strong> - status is set to
+                    <strong>pending</strong> upon account creation, but status can be changed to any of the following
+                    options:
+                    <ul>
+                        <li><strong>Active</strong> - the account is active and the products can be sold.</li>
+                        <li><strong>Close</strong> - a request for hard delete of the account data has been made and no
+                            purchase can be made.</li>
+                        <li><strong>Inactive</strong> - the seller and buyer are no longer doing business and no
+                            purchase can be made.</li>
+                        <li><strong>Pending</strong> - the account has not been fully activated and no purchase can be
+                            made (the default status).</li>
+                        <li><strong>Reject</strong> - the account request can be rejected if the buyer organization
+                            doesn't meet terms &amp; conditions.</li>
+                        <li><strong>Suspended</strong> - the account payment is overdue from the buyer and no purchase
+                            can be made while the account is in suspended status.</li>
+                    </ul>
+                </li>
+            </ul>
+            <p class="tab"><img
+                    src="https://res.cloudinary.com/damplk/image/upload/v1566506346/accounts/image_15_uhwq2v.png"
+                    alt="Account Status" width="90%" max-width="90%" height="auto" /></p>
+            </br>
+            <ul>
+                <li><strong>Account Information</strong> - input is required<strong style="color:red">*</strong> for the
+                    following editable fields, unless otherwise indicated:
+                    <ul>
+                        <li><strong>Account Name</strong><strong style="color:red">*</strong> - buyer name</li>
+                        <li><strong>Tax ID</strong><strong style="color:red">*</strong> - buyer's federal tax
+                            identification number</li>
+                        <li><strong>DUNS number</strong> (optional) - buyer's unique nine-digit identifier from Dun and
+                            Bradstreet</li>
+                        <li><strong>Buyer Admin Name</strong><strong style="color:red">*</strong> - buyer admin's name
+                        </li>
+                        <li><strong>Account Address</strong><strong style="color:red">*</strong> - buyer's street
+                            address</li>
+                        <li><strong>City</strong><strong style="color:red">*</strong> - buyer's city</li>
+                        <li><strong>State</strong><strong style="color:red">*</strong> - buyer's state</li>
+                        <li><strong>Country</strong><strong style="color:red">*</strong> - buyer's country</li>
+                        <li><strong>Zipcode</strong><strong style="color:red">*</strong> - buyer's zip code</li>
+                        <li><strong>Account Size</strong><strong style="color:red">*</strong> - buyer's company size
+                        </li>
+                        <li><strong>Account Type</strong><strong style="color:red">*</strong> - configurable by the
+                            Business Admin to allow buyers to segment their customers</li>
+                    </ul>
+
+                    <p><strong>Note</strong>: The buyer admin's email address is NOT editable.</p>
+                </li>
+                <li>
+                    <p>Click the <strong>Save</strong> button at the bottom of the screen to save your changes.</p>
+                </li>
+            </ul>
+            <p class="tab"><img
+                    src="https://res.cloudinary.com/damplk/image/upload/v1566506346/accounts/image_16_biqu7g.png"
+                    alt="Account Information" width="90%" max-width="90%" height="auto" /></p>
+            <ul>
+                <li>Click the <strong>Contract</strong> tab to edit Contract details for the Account.</li>
+            </ul>
+            <p class="tab"><img
+                    src="https://res.cloudinary.com/damplk/image/upload/v1566506346/accounts/image_17_wengh2.png"
+                    alt="Contracts Tab" width="90%" max-width="90%" height="auto" /></p>
+            </br>
+            <ul>
+                <li>
+                    <p>The <strong>Contract</strong> tab contains the following sections and editable fields, which are
+                        required<strong style="color:red">*</strong> unless otherwise noted:</p>
+                    <ul>
+                        <li><strong>Contract Information</strong>
+                            </br>
+                            <ul>
+                                <li><strong>Catalog</strong><strong style="color:red">*</strong> - a dropdown containing
+                                    sales catalog created by a Catalog manager</li>
+                                <li><strong>Price List</strong><strong style="color:red">*</strong> - a dropdown
+                                    containing price lists created by a Pricing manager</li>
+                                <li><strong>Payment Method</strong><strong style="color:red">*</strong> - a dropdown
+                                    containing payment method options (for example, PO, Credit Card, etc.) configured by
+                                    a Business Admin</li>
+                                <li><strong>Payment Terms</strong><strong style="color:red">*</strong> (appears after
+                                    payment method is selected) - a dropdown containing payment term options (for
+                                    example, Net30, Net45, etc.) configured for the business</li>
+                                <li><strong>Credit Limit</strong><strong style="color:red">*</strong> - represents the
+                                    maximum purchasing limit of the buyer, which is reduced by any outstanding
+                                    purchases.</li>
+                            </ul>
+                        </li>
+                        </br>
+                        <li><strong>Upload Contract</strong>
+                            <ul>
+                                <li><strong>Contract Document</strong> (optional) - an electronic version of the buyer
+                                    and seller contract can be uploaded (one at a time) from a local drive</li>
+                                <li><strong>Expiration Date</strong><strong style="color:red">*</strong> - current
+                                    contract expiration date</li>
+                            </ul>
+                        </li>
+                        </br>
+                        <li>Click the <strong>Save</strong> button when done to save any changes.</li>
+                    </ul>
+                </li>
+            </ul>
+            <p class="tab"><img
+                    src="https://res.cloudinary.com/damplk/image/upload/v1566506346/accounts/image_18_usozwg.png"
+                    alt="Contract Fields" width="90%" max-width="90%" height="auto" /></p>
+            </br>
+            <p><strong>Note</strong>: Once uploaded, the contracts can be downloaded by clicking the
+                <strong>Download</strong> button to the right of the contract under the <strong>Existing
+                    Contract</strong> section.</p>
+            <p class="tab"><img
+                    src="https://res.cloudinary.com/damplk/image/upload/v1566506346/accounts/image_19_m3mbfq.png"
+                    alt="Contracts Download" width="90%" max-width="90%" height="auto" /></p>
+            </br>
+            <ul>
+                <li>
+                    <p>The <strong>Orders</strong> tab contains a complete list of <strong>orders</strong> made by
+                        <strong>all</strong> buyers.</p>
+
+                    <ul>
+                        <li>As with other <strong>Accounts</strong> screens with <strong>row</strong> data, the contents
+                            can be <strong>searched</strong>, <strong>sorted</strong>, and <strong>exported</strong> by
+                            an Accounts Manager.</li>
+                    </ul>
+                </li>
+            </ul>
+            <p class="tab"><img
+                    src="https://res.cloudinary.com/damplk/image/upload/v1566506346/accounts/image_20_x2isad.png"
+                    alt="Orders Tab" width="90%" max-width="90%" height="auto" /></p>
+            </br>
+            <ul>
+                <li>
+                    <p>The <strong>Customers</strong> tab contains a complete list of the business'
+                        <strong>buyers.</strong></p>
+
+                    <ul>
+                        <li>As with other <strong>Accounts</strong> screens with <strong>row</strong> data, the contents
+                            can be <strong>searched</strong>, <strong>sorted</strong>, and <strong>exported</strong> by
+                            an Accounts Manager.</li>
+                    </ul>
+                </li>
+            </ul>
+            <p class="tab"><img
+                    src="https://res.cloudinary.com/damplk/image/upload/v1566506346/accounts/image_21_igvv3e.png"
+                    alt="Customers Tab" width="90%" max-width="90%" height="auto" /></p>
+            </br>
+            <ul>
+                <li>Click the <strong>Accounts</strong> option in the <em>breadcrumb</em> at the top left of the
+                    <strong>ACCOUNT</strong> screen to return to the home screen of the Accounts Console.</li>
+            </ul>
+            </br>
+            <p class="tab"><img
+                    src="https://res.cloudinary.com/damplk/image/upload/v1566506346/accounts/image_22_aptfxu.png"
+                    alt="Breadcrumb" width="90%" max-width="90%" height="auto" /></p>
+            <hr width="10%">
+            <center><a href="#top"><strong>TOP</strong></a></center>
+            </br>
+            <div id="view">
+                <h3>View/Edit Account Details</h3>
+            </div>
+            <ul>
+                <li>
+                    <p>Depending upon the <strong>Status</strong> set for the account, there will be either an "
+                        <strong>></strong> " to the right of an account at the end of its row or an
+                        <strong>Edit</strong> button when you hover over the account on the Accounts home screen.</p>
+                </li>
+                <li>
+                    <p>Click the " <strong>></strong> " or the <strong>Edit</strong> button for the desired account to
+                        <strong>view</strong> or <strong>edit</strong> its <strong>details</strong>, including the
+                        Account <strong>overview</strong> as well as its <strong>contract</strong>,
+                        <strong>order</strong>, and <strong>customer</strong> details.</p>
+                </li>
+            </ul>
+            </br>
+            <p class="tab"><img
+                    src="https://res.cloudinary.com/damplk/image/upload/v1566506347/accounts/image_23_jj3adh.png"
+                    alt="Account Details" width="90%" max-width="90%" height="auto" /></p>
+            </br>
+            <ul>
+                <li>
+                    <p>See the <a href="#create">Create Accounts</a> section above for details about working with the
+                        <strong>Account Information</strong> tabs.</p>
+                </li>
+                <li>
+                    <p>Click the <strong>Accounts</strong> option in the <em>breadcrumb</em> at the top left of the
+                        <strong>ACCOUNT</strong> screen to return to the home screen of the Accounts Console.</p>
+                </li>
+            </ul>
+            </br>
+            <p class="tab"><img
+                    src="https://res.cloudinary.com/damplk/image/upload/v1566506347/accounts/image_24_vn8t6x.png"
+                    alt="Breadcrumb" width="90%" max-width="90%" height="auto" /></p>
+            <hr width="10%">
+            <center><a href="#top"><strong>TOP</strong></a></center>
+            <p></br>
+                <hr>
+                </br>
+                <strong>Revision History</strong></br>
+                2018-12-28 | PLK - Page created and content uploaded.
+                <script>
+                    window.onscroll = function () { myFunction() };
+
+                    var navbar = document.getElementById("navbar");
+                    var sticky = navbar.offsetTop;
+
+                    function myFunction() {
+                        if (window.pageYOffset >= sticky) {
+                            navbar.classList.add("sticky")
+                        } else {
+                            navbar.classList.remove("sticky");
+                        }
+                    }
+                </script>
+</body>
+
+</html>
