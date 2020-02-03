@@ -14,36 +14,31 @@ $(document).ready(function () {
         },
         "async": true,
         "crossDomain": true,
-       
+
         success: function (response) {
 
             // console.log(response);
-            // console.log(response.en);
-            // console.log(response.author);
 
             $("#quote").html(response.en + " - " + response.author);
         },
         error: function () {
-            $("#quote").html("Sorry, there was an error retrieving the quote.  Please try again.");
+            $("#quote").html("Sorry, there was an error retrieving your quote. Refresh the page try again.");
         },
         type: "GET"
     });
 
-    // Tooltips
+    // Tooltips enabled for projects with alternate images
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
-      })
+    })
 
-    // Switch Images
+    // Switch images on click
     $(document).on("click", ".card-img-top", function () {
 
-        //  $(".gif").on("click", function () {
-        // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
+        // Get or set the state of the images with alternate images
         var state = $(this).attr("data-state");
-        // console.log(state);
-        // If the clicked image's state is still, update its src attribute to what its data-animate value is.
-        // Then, set the image's data-state to animate
-        // Else set src to the data-still value
+        // If the clicked image's state is data-begin, update its src attribute to data-end
+        // If the clicked image's state is data-end, update its src attribute to data-begin
         if (state === "begin") {
             $(this).attr("src", $(this).attr("data-end"));
             $(this).attr("data-state", "end");
