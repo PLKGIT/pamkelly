@@ -7,25 +7,45 @@ $(document).ready(function () {
     // Call Programming Quotes API on page load
     // https://programming-quotes-api.herokuapp.com/
 
-    $.ajax({
-        url: "https://programming-quotes-api.herokuapp.com/quotes/random",
-        data: {
-            format: 'json'
-        },
+    // $.ajax({
+    //     url: "https://programming-quotes-api.herokuapp.com/quotes/random",
+    //     data: {
+    //         format: 'json'
+    //     },
+    //     "async": true,
+    //     "crossDomain": true,
+
+    //     success: function (response) {
+
+    //         // console.log(response);
+
+    //         $("#quote").html(response.en + " - " + response.author);
+    //     },
+    //     error: function () {
+    //         $("#quote").html("Sorry, there was an error retrieving your quote. Refresh the page try again.");
+    //     },
+    //     type: "GET"
+    // });
+
+    var settings = {
         "async": true,
         "crossDomain": true,
+        "url": "https://numbersapi.p.rapidapi.com/random/trivia?max=20&fragment=true&min=10&json=true",
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "numbersapi.p.rapidapi.com",
+            "x-rapidapi-key": "a102a6bd42msh621d5bd9f35a97cp1e956ajsne435b3fc88d0"
+        }
+    }
 
-        success: function (response) {
+    $.ajax(settings).done(function (response) {
+        console.log(response);
 
-            // console.log(response);
-
-            $("#quote").html(response.en + " - " + response.author);
-        },
-        error: function () {
-            $("#quote").html("Sorry, there was an error retrieving your quote. Refresh the page try again.");
-        },
-        type: "GET"
+        $("#quote").html(response.text + "... <br>" + response.number);
     });
+
+    
+
 
     // Switch images on click
     $(document).on("click", ".card-img-top", function () {
