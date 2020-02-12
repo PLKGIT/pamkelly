@@ -30,7 +30,7 @@ $(document).ready(function () {
     var settings = {
         "async": true,
         "crossDomain": true,
-        "url": "https://numbersapi.p.rapidapi.com/random/trivia?max=20&fragment=true&min=10&json=true",
+        "url": "https://numbersapi.p.rapidapi.com/random/trivia?max=50&min=10&json=true",
         "method": "GET",
         "headers": {
             "x-rapidapi-host": "numbersapi.p.rapidapi.com",
@@ -41,7 +41,7 @@ $(document).ready(function () {
     $.ajax(settings).done(function (response) {
         console.log(response);
 
-        $("#quote").html(response.text + "... <br>" + response.number);
+        $("#quote").html(response.text);
     });
 
     
