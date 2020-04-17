@@ -4,29 +4,6 @@
 
 $(document).ready(function () {
 
-    // Call Programming Quotes API on page load
-    // https://programming-quotes-api.herokuapp.com/
-
-    // $.ajax({
-    //     url: "https://programming-quotes-api.herokuapp.com/quotes/random",
-    //     data: {
-    //         format: 'json'
-    //     },
-    //     "async": true,
-    //     "crossDomain": true,
-
-    //     success: function (response) {
-
-    //         // console.log(response);
-
-    //         $("#quote").html(response.en + " - " + response.author);
-    //     },
-    //     error: function () {
-    //         $("#quote").html("Sorry, there was an error retrieving your quote. Refresh the page try again.");
-    //     },
-    //     type: "GET"
-    // });
-
     var settings = {
         "async": true,
         "crossDomain": true,
@@ -43,8 +20,6 @@ $(document).ready(function () {
 
         $("#quote").html(response.text);
     });
-
-    
 
 
     // Switch images on click
