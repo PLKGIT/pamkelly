@@ -30,9 +30,12 @@ $(document).ready(function () {
         // If the clicked image's state is data-begin, update its src attribute to data-end
         // If the clicked image's state is data-end, update its src attribute to data-begin
         if (state === "begin") {
+            $(this).attr("src", $(this).attr("data-mid"));
+            $(this).attr("data-state", "mid");
+        } else if (state === "mid") {
             $(this).attr("src", $(this).attr("data-end"));
             $(this).attr("data-state", "end");
-        } else {
+        } else if (state === "end") {
             $(this).attr("src", $(this).attr("data-begin"));
             $(this).attr("data-state", "begin");
         }
