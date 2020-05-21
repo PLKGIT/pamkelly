@@ -19,7 +19,7 @@ Professional website (https://www.pamkelly.com) that contains developer and tech
 * MeyerWeb CSS Reset
 
 ### APIs
-* [Programming Quotes API](https://programming-quotes-api.herokuapp.com/) at https://programming-quotes-api.herokuapp.com/ 
+* [Numbers API](https://rapidapi.com/divad12/api/numbers-1) at https://rapidapi.com/divad12/api/numbers-1 
 
 ### Assets
 * \index.html <!---Home page--->
@@ -32,7 +32,7 @@ Professional website (https://www.pamkelly.com) that contains developer and tech
 * \assets\writing\ <!---Tech Writing / Documentation Porfolio Assets--->
 * \assets\images\ <!---All images are being served from my CDN on Cloudinary--->
 
-## Last Updated: 04/30/2020
+## Last Updated: 05/21/2020
 
 ### Developer
 Pam Kelly at [esq.kelly@gmail.com](mailto:esq.kelly@gmail.com)
